@@ -91,7 +91,7 @@ random(void)
 
 /* Windows Vista and later already provide the implementation. */
 #if _WIN32_WINNT < 0x0600
-extern const char *inet_ntop(int, const void *, char *, socklen_t);
+extern const char* WSAAPI inet_ntop(int, void *, char *, size_t);
 #endif
 
 #ifdef _MSC_VER
